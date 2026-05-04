@@ -32,10 +32,12 @@ import { GolfBallTrajectory, TrajectoryResult } from '../../services/physics.ser
                 <label>Launch Angle: {{ config.launchAngle }}°</label>
                 <input type="range" [min]="5" [max]="25" [step]="1" [(ngModel)]="config.launchAngle" (ngModelChange)="updateConfigs()">
               </div>
+              <!--
               <div class="control-group">
                 <label>Spin Rate: {{ config.spinRate }} RPM</label>
                 <input type="range" [min]="1500" [max]="4500" [step]="100" [(ngModel)]="config.spinRate" (ngModelChange)="updateConfigs()">
               </div>
+              -->
               <div class="control-group">
                 <label>Face Angle: {{ config.faceAngle }}°</label>
                 <input type="range" [min]="-8" [max]="8" [step]="0.5" [(ngModel)]="config.faceAngle" (ngModelChange)="updateConfigs()">

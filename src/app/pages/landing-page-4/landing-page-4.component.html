@@ -15,6 +15,12 @@
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            position: relative;
+        }
+
         body {
             font-family: Georgia, 'Times New Roman', serif;
             font-size: 21px;
@@ -23,11 +29,13 @@
             background-color: var(--light-bg);
         }
 
+            box-sizing: border-box;
+            width: 100%;
         /* ── LAYOUT ── */
         .container {
             max-width: 860px;
             margin: 0 auto;
-            padding: 36px 36px 48px;
+            padding: 36px;
             background: #fff;
         }
 
@@ -201,7 +209,8 @@
             text-align: center;
             letter-spacing: 0.04em;
             margin: 20px 0 12px;
-            white-space: nowrap;
+            white-space: normal;
+            word-wrap: break-word;
         }
 
         /* ── MEDIA: full-bleed videos ── */
@@ -228,19 +237,18 @@
 
         /* ── MEDIA: side-by-side images ── */
         .side-by-side {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+            display: flex;
+            justify-content: center;
             gap: 12px;
             width: 100%;
             margin: 20px 0;
         }
 
         .side-by-side img {
-            width: 100%;
+            width: calc(50% - 6px);
             height: auto;
             aspect-ratio: 4 / 5;
             object-fit: cover;
-            display: block;
             border-radius: 4px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.10);
         }
@@ -258,12 +266,14 @@
             border-radius: 6px;
             overflow: hidden;
             box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+            text-align: center;
         }
 
         .full-width-img, .loop-video {
             width: 100%;
             height: auto;
             display: block;
+            margin: 0 auto;
         }
 
         .loop-video {
@@ -403,7 +413,7 @@
 
         .reviews-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1.25rem;
             max-width: 860px;
             margin: 0 auto 2.5rem;
@@ -529,7 +539,8 @@
             h2 { font-size: 1.55rem; }
             .container { padding: 32px 18px 60px; }
             body { font-size: 18px; }
-            .side-by-side { grid-template-columns: 1fr; }
+            .side-by-side { flex-direction: column; align-items: center; }
+            .side-by-side img { width: 100%; }
         }
     </style>
 </head>
@@ -575,7 +586,7 @@
 
             <p class="clock-equation">1 minute on a clock = 6° = <span style="color: #c0392b;">48 yards offline</span></p>
             <div class="clock-container clock-container--centered">
-                <video class="clock-video" autoplay loop [muted]="true" playsinline>
+                <video class="clock-video" style="max-width: 100%; margin: 0 auto; display: block;" autoplay loop [muted]="true" playsinline>
                     <source src="assets/images/Clock.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -610,11 +621,10 @@
                 </li>
             </ul>
 
-            <div class="media-stack side-by-side">
+            <div class="side-by-side">
                 <img src="assets/images/Left.PNG" alt="Visualizing a Closed Face Angle">
                 <img src="assets/images/Right.PNG" alt="Visualizing an Open Face Angle">
             </div>
-            <p class="media-caption">Open or closed by just 2 degrees — your ball ends up in completely different zip codes.</p>
         </section>
 
         <section class="content-section">
