@@ -29,8 +29,6 @@
             background-color: var(--light-bg);
         }
 
-            box-sizing: border-box;
-            width: 100%;
         /* ── LAYOUT ── */
         .container {
             max-width: 860px;
@@ -537,10 +535,16 @@
         @media (max-width: 768px) {
             h1 { font-size: 2rem; }
             h2 { font-size: 1.55rem; }
-            .container { padding: 32px 18px 60px; }
+            .container { padding: 20px 16px 40px; }
             body { font-size: 18px; }
             .side-by-side { flex-direction: column; align-items: center; }
             .side-by-side img { width: 100%; }
+            .final-cta { padding: 3rem 1.25rem; }
+            .btn-primary, .btn-primary.large { padding: 1rem 1.5rem; font-size: 1rem; letter-spacing: 0.06em; word-break: break-word; }
+            .clock-container--centered { max-width: 90%; }
+            .guarantee-inner { flex-direction: column; text-align: center; }
+            .data-visualization { padding: 20px 14px; }
+            .reviews { padding: 3rem 1.25rem; }
         }
     </style>
 </head>
@@ -571,7 +575,7 @@
                 <img class="author-avatar" src="assets/images/hoyt_avatar.jpg" alt="Hoyt Hicks">
                 <div class="byline-text">
                     <span class="byline-pre">By</span>
-                    <span class="byline-name">Harley H</span>
+                    <span class="byline-name">Steven Shank</span>
                     <span class="byline-date">May 3, 2026</span>
                     <span class="byline-partner">In Partnership With Gentle Gator Golf</span>
                 </div>
