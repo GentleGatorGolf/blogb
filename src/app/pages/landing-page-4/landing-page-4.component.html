@@ -243,7 +243,7 @@
         }
 
         .side-by-side img {
-            width: calc(50% - 6px);
+            width: calc(35% - 6px);
             height: auto;
             aspect-ratio: 4 / 5;
             object-fit: cover;
@@ -258,17 +258,8 @@
         }
 
         /* ── MEDIA: full-width image ── */
-        .media-stack {
-            width: 100%;
-            margin: 20px 0;
-            border-radius: 6px;
-            overflow: hidden;
-            box-shadow: 0 4px 18px rgba(0,0,0,0.12);
-            text-align: center;
-        }
-
         .full-width-img, .loop-video {
-            width: 100%;
+            width: 70%;
             height: auto;
             display: block;
             margin: 0 auto;
@@ -583,7 +574,7 @@
 
             <p class="intro-text">
                 In golf, a tiny mistake at address leads to a huge miss down the fairway.
-                Being off by just 1 degree at impact is the difference between a perfect drive
+                Being off by just 1 tick on a clock face at impact is the difference between a perfect drive
                 and a ball lost in the woods. For most golfers, the problem isn't their swing—it's
                 that they are aiming their clubface at the wrong target without even knowing it.
             </p>
@@ -601,9 +592,9 @@
             <span class="section-label">The Problem</span>
             <h2>The Slice and Hook Trap</h2>
             <p>You can have the best swing in the world, but if your clubface isn't
-                square at the moment of truth, the ball is going to curve. Most golfers
-                fight a slice or a hook for years because they can't actually see where
-                their driver is pointing when they stand over the ball.</p>
+                square at the moment of impact, the ball is going to curve. Most golfers
+                fight a slice or a hook or worse both. This isn't uncomon because modern drivers don't have good references for aiming
+                This can make even being repeatable with a single miss difficult because minute changes are hard to detect</p>
             
             <ul class="bullet-list">
                 <li>
@@ -620,7 +611,7 @@
                     <div class="bullet-body">
                         <span class="bullet-title">Small Miss, Big Trouble</span>
                         <p>A miss that looks small at your feet becomes massive 250 yards away.
-                            What feels like a slight tweak often ends up 40 yards deep in the rough.</p>
+                            What feels like a slight tweak often ends up over 40 yards offline and in trouble.</p>
                     </div>
                 </li>
             </ul>
@@ -643,35 +634,33 @@
                 <li>
                     <div class="bullet-icon">1</div>
                     <div class="bullet-body">
-                        <span class="bullet-title">Magnets Don't Work</span>
-                        <p>Today's high-performance drivers are made of titanium and carbon fiber which are not magnetic. So the traditional <strong>magnetic face pointers fail.</strong> to stick!</p>
+                        <span class="bullet-title">Magnets Don't Work for Drivers</span>
+                        <p>Today's high-performance drivers are made of titanium and carbon fiber which are not magnetic. So the traditional <strong>magnetic face pointers fail</strong> to stick!</p>
                     </div>
                 </li>
                 <li>
                     <div class="bullet-icon">2</div>
                     <div class="bullet-body">
                         <span class="bullet-title">A Tool Is Just a Tool Without Instruction</span>
-                        <p>Online resources are scatter and focus on the swing instead of the club face. Drive Align 
-                            inlcudes a simple, step-by-step guide that teaches you how to use the tool to fix your aim and start hitting straighter drives.
+                        <p>Online resources are scattered and focus on the swing instead of the club face. Drive Align 
+                            inlcudes a simple, 5 lesson video series that teaches you how to use the tool to fix your aim and start hitting straighter drives.
                         </p>
                     </div>
                 </li>
             </ul>
 
             
-            <div class="media-stack">
-                <img
+            <img
                     src="assets/images/Straight.PNG"
                     alt="A Perfectly Square Face Alignment"
                     class="full-width-img img-square"
                 >
-            </div>
             <p class="media-caption">A square face at impact is the difference between a fairway and a phone call to find your ball.</p>
         </section>
 
         <section class="content-section">
             <span class="section-label">The Tool</span>
-            <h2>Drive Align Not Just Another Face Pointer</h2>
+            <h2>Drive Align: Not Just Another Face Pointer</h2>
             <p> I was tired of taping objects to my driver leaving nasty residue on my club and not to mention the result
                 was never straight. Cheap kids toys fall off and get bent out of shape faster than you can put them on. I wanted a real tool that was designed for the modern driver and could give me an instant visual of where my clubface was pointing at address and impact.
                 So I Invented Drive Align — the only face pointer designed for modern drivers.
@@ -682,25 +671,23 @@
                     <div class="bullet-icon">1</div>
                     <div class="bullet-body">
                         <span class="bullet-title">Drive Align Sticks To Drivers</span>
-                        <p>This is why we invented <strong>Drive Align</strong>. It's the only face pointer designed for modern drivers. It presses directly onto the face, giving you an instant visual of where your driver is pointing.</p>
+                        <p>This is why I invented <strong>Drive Align</strong>. It's the only face pointer designed for modern drivers. It presses directly onto the face, giving you an instant visual of where your driver is pointing.</p>
                     </div>
                 </li>
                 <li>
                     <div class="bullet-icon">2</div>
                     <div class="bullet-body">
                         <span class="bullet-title">Fast and Easy Setup</span>
-                        <p>We made this for the range. It sticks on in seconds and stays put,
+                        <p>We made this for the range. It sticks on in easily and stays put,
                             so you can practice your aim to hit the ball straighter.</p>
                     </div>
                 </li>
             </ul>
 
-            <div class="media-stack">
-                <video class="loop-video" autoplay loop [muted]="true" playsinline>
+            <video class="loop-video" autoplay loop [muted]="true" playsinline>
                     <source src="assets/images/Full_Video.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-            </div>
             <p class="media-caption">Drive Align snaps on in seconds — instant proof of exactly where your driver is pointed.</p>
         </section>
 
