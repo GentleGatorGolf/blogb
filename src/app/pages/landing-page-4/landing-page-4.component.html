@@ -49,10 +49,7 @@
 
         /* ── INTRO ── */
         .intro-text {
-            font-size: 1.3rem;
-            color: #222;
-            line-height: 1.95;
-            margin-bottom: 20px;
+            display: none;
         }
 
         /* ── ROADMAP CALLOUT ── */
@@ -153,8 +150,8 @@
             display: flex;
             align-items: center;
             gap: 0.85rem;
-            margin-bottom: 1.5rem;
-            padding-bottom: 1.25rem;
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.75rem;
             border-bottom: 1px solid #e5e5e5;
         }
 
@@ -644,37 +641,38 @@
             <div class="blog-byline">
                 <img class="author-avatar" src="assets/images/hoyt_avatar.jpg" alt="Hoyt Hicks">
                 <div class="byline-text">
-                    <span class="byline-pre">By</span>
-                    <span class="byline-name">Steven Shank</span>
+                    <span class="byline-name">By: Steven S</span>
                     <span class="byline-date">May 3, 2026</span>
                     <span class="byline-partner">In Partnership With Gentle Gator Golf</span>
                 </div>
             </div>
 
-
-
-            <p class="intro-text">
-                Golf is a game of details. Across the country every weekend golfers make this mistake every 
-                time they tee up the ball. The crazy part is its right in front of their eyes and they don't even know it. 
-                In fact, most golfers blame their swing for their errant drives when the real culprit is their clubface alignment. 
-            </p>
-            <img
-                src="assets/images/CanYouSeeDiff.png"
-                alt="A Perfectly Square Face Alignment"
-                class="full-width-img img-square"
-            >
-            <p class="intro-text">
-                The face angle at impact is the #1 factor of ball flight and distance, yet it's the one thing most golfers have no idea how to check or adjust. 
+            <section class="content-section" style="margin-top: 0; border-top: none; padding-top: 0;">
+                <span class="section-label">THE MYSTERY</span>
+                <p>Golf is a game of details. Across the country every weekend golfers make this mistake every 
+                time they tee up the ball. The crazy part is its right in front of their eyes and they don't even know it. In fact, most golfers blame 
+                their swing for their errant drives when the real culprit is their clubface alignment.</p>
+                
+                <img
+                    src="assets/images/CanYouSeeDiff.png"
+                    alt="A Perfectly Square Face Alignment"
+                    class="full-width-img img-square"
+                    style="width: 85%;"
+                >
+                
+                <p>The face angle at impact is the #1 factor of ball flight and distance, yet it's the one thing most golfers have no idea how to check or adjust.
                 <strong>Aiming your driver face just 1 tick left or right on a clock face at impact is the difference between a perfect drive
-                and a ball lost in the woods.</strong>  The mistake is repeated over and over regardless of how "shallow" or "good" a player's swing is because
-                they think their club face is straight when it's not. 
-            <p class="clock-equation">1 minute on a clock = 6° = <span style="color: #c0392b;">Huge Miss</span></p>
-            <div class="clock-container clock-container--centered">
-                <video class="clock-video" style="max-width: 100%; margin: 0 auto; display: block;" autoplay loop [muted]="true" playsinline>
-                    <source src="assets/images/Clock.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
+                and a ball lost in the woods.</strong> The mistake is repeated over and over regardless of how "shallow" or "good" a player's swing is because
+                they think their club face is straight when it's not.</p>
+                
+                <p class="clock-equation">1 minute on a clock = 6° = <span style="color: #c0392b;">Huge Miss</span></p>
+                <div class="clock-container clock-container--centered">
+                    <video class="clock-video" style="max-width: 100%; margin: 0 auto; display: block;" autoplay loop [muted]="true" playsinline>
+                        <source src="assets/images/Clock.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </section>
         </header>
 
         <section class="content-section" style="margin-top: 1.5rem;">
