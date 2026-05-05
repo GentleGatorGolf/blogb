@@ -251,18 +251,25 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.10);
         }
 
-        .img-square {
-            aspect-ratio: 1 / 1;
-            object-fit: cover;
-            object-position: center;
-        }
-
         /* ── MEDIA: full-width image ── */
         .full-width-img, .loop-video {
             width: 70%;
             height: auto;
             display: block;
             margin: 0 auto;
+        }
+
+        .img-square {
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        /* Specifically for the Face Pointers section */
+        .face-pointers-img {
+            width: 90% !important;
+            aspect-ratio: auto !important;
+            object-fit: contain !important;
         }
 
         .loop-video {
@@ -305,33 +312,100 @@
 
         /* ── FINAL CTA ── */
         .final-cta {
-            padding: 6rem 2rem;
             background: #f8faf9;
+            border: 2px solid var(--primary-green);
+            color: #1a1a1a;
+            border-radius: 12px;
+            padding: 2rem;
             text-align: center;
+            margin: 3.5rem 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
 
-        .final-cta h2 {
+        .final-cta h3 {
             font-family: Arial, sans-serif;
-            font-size: clamp(1.75rem, 4vw, 3rem);
+            font-size: 1.8rem;
             font-weight: 900;
-            letter-spacing: -0.01em;
-            margin-bottom: 1rem;
-            color: #111;
+            margin-bottom: 0.5rem;
+            color: var(--primary-green);
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
         }
 
-        .cta-sub {
-            font-family: Arial, sans-serif;
-            font-size: 1.05rem;
-            line-height: 1.7;
+        .final-cta p {
+            font-size: 1.1rem;
             color: #444;
-            max-width: 560px;
-            margin: 0 auto 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .cta-list {
+            list-style: none;
+            text-align: left;
+            display: inline-block;
+            margin: 0 auto 1.5rem;
+            padding: 0;
+            max-width: 400px;
+        }
+
+        .cta-list li {
+            font-family: Arial, sans-serif;
+            font-size: 1.15rem;
+            padding: 0.25rem 0;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .cta-list li::before {
+            content: '✓';
+            color: #27ae60;
+            font-weight: 900;
+        }
+
+        .cta-promise {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--primary-green);
+            margin-bottom: 2rem;
+            display: block;
+        }
+
+        .btn-primary.cta-btn {
+            display: inline-block;
+            background: #f5c518;
+            color: #111;
+            font-family: Arial, sans-serif;
+            font-weight: 900;
+            font-size: 1.15rem;
+            letter-spacing: 0.02em;
+            padding: 1.1rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 4px 0 #c29d12;
+            width: 100%;
+            max-width: 400px;
+            box-sizing: border-box;
+            line-height: normal;
+        }
+
+        .btn-primary.cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 0 #c29d12;
+            background: #f7d046;
+        }
+
+        .btn-primary.cta-btn:active {
+            transform: translateY(2px);
+            box-shadow: 0 0 0 #c29d12;
         }
 
         .btn-primary {
             display: inline-block;
-            background: var(--primary-green);
-            color: #fff;
+            background: #f5c518;
+            color: #111;
             font-weight: 800;
             font-size: 1.1rem;
             letter-spacing: 0.12em;
@@ -346,7 +420,7 @@
             padding: 1.5rem 4.5rem;
         }
 
-        .btn-primary:hover { background: #12351f; transform: translateY(-2px); }
+        .btn-primary:hover { background: #e2b415; transform: translateY(-2px); }
 
         /* ── REVIEWS ── */
         .reviews {
@@ -572,14 +646,24 @@
                 </div>
             </div>
 
-            <p class="intro-text">
-                In golf, a tiny mistake at address leads to a huge miss down the fairway.
-                Being off by just 1 tick on a clock face at impact is the difference between a perfect drive
-                and a ball lost in the woods. For most golfers, the problem isn't their swing—it's
-                that they are aiming their clubface at the wrong target without even knowing it.
-            </p>
 
-            <p class="clock-equation">1 minute on a clock = 6° = <span style="color: #c0392b;">48 yards offline</span></p>
+
+            <p class="intro-text">
+                Golf is a game of details. Across the country every weekend golfers make this mistake every 
+                time they tee up the ball. The crazy part is its right in front of their eyes and they don't even know it. 
+                In fact, most golfers blame their swing for their errant drives when the real culprit is their clubface alignment. 
+            </p>
+            <img
+                src="assets/images/CanYouSeeDiff.png"
+                alt="A Perfectly Square Face Alignment"
+                class="full-width-img img-square"
+            >
+            <p class="intro-text">
+                The face angle at impact is the #1 factor of ball flight and distance, yet it's the one thing most golfers have no idea how to check or adjust. 
+                <strong>Aiming your driver face just 1 tick left or right on a clock face at impact is the difference between a perfect drive
+                and a ball lost in the woods.</strong>  The mistake is repeated over and over regardless of how "shallow" or "good" a player's swing is because
+                they think their club face is straight when it's not. 
+            <p class="clock-equation">1 minute on a clock = 6° = <span style="color: #c0392b;">Huge Miss</span></p>
             <div class="clock-container clock-container--centered">
                 <video class="clock-video" style="max-width: 100%; margin: 0 auto; display: block;" autoplay loop [muted]="true" playsinline>
                     <source src="assets/images/Clock.mp4" type="video/mp4">
@@ -591,27 +675,28 @@
         <section class="content-section" style="margin-top: 1.5rem;">
             <span class="section-label">The Problem</span>
             <h2>The Slice and Hook Trap</h2>
-            <p>You can have the best swing in the world, but if your clubface isn't
-                square at the moment of impact, the ball is going to curve. Most golfers
-                fight a slice or a hook or worse both. This isn't uncomon because modern drivers don't have good references for aiming
-                This can make even being repeatable with a single miss difficult because minute changes are hard to detect</p>
+            <p>Drivers are really hard to aim. Driver heads have no flat edges, grooves, or aiming guides making aiming the clubface
+                            a complete guessing game. To make matters worse your eyes are positioned really far behind the club head making it near impossible without
+                            a lot of trial and error. I like to compare it to trying to level a picture frame that
+                            is an oval instead of a square.</p>
             
             <ul class="bullet-list">
                 <li>
                     <div class="bullet-icon">1</div>
                     <div class="bullet-body">
                         <span class="bullet-title">Drivers Are Hard to Aim</span>
-                        <p>Drivers have no flat edges or aiming guides making aiming the clubface
-                            a complete guessing game. Imagine trying to level a picture frame that
-                        is an oval instead of a square.</p>
+                        <p>To maximize distance and aerodynamics club manufactures make driver heads very complex shapes. This is great on paper but in reality
+                            it causes most golfers to aim and hold their club incorrectly.
+                        </p>
                     </div>
                 </li>
                 <li>
                     <div class="bullet-icon">2</div>
                     <div class="bullet-body">
                         <span class="bullet-title">Small Miss, Big Trouble</span>
-                        <p>A miss that looks small at your feet becomes massive 250 yards away.
-                            What feels like a slight tweak often ends up over 40 yards offline and in trouble.</p>
+                        <p>Don't overestimate your ability to aim. Just 6 degrees or minut on a clock face is enought to send your ball off the golf course
+                            costing you a stroke.
+                        </p>
                     </div>
                 </li>
             </ul>
@@ -642,30 +727,35 @@
                     <div class="bullet-icon">2</div>
                     <div class="bullet-body">
                         <span class="bullet-title">A Tool Is Just a Tool Without Instruction</span>
-                        <p>Online resources are scattered and focus on the swing instead of the club face. Drive Align 
-                            inlcudes a simple, 5 lesson video series that teaches you how to use the tool to fix your aim and start hitting straighter drives.
+                        <p>Just because a face pointer is on your club doesn't mean everything is fixed. Finding online resources feels like a scavenger hunt
+                            with conflicting advice and no clear path. You need a step-by-step system to learn how to use the tool and adjust your aim for real improvement.
                         </p>
                     </div>
                 </li>
             </ul>
 
             
-            <img
-                    src="assets/images/Straight.PNG"
-                    alt="A Perfectly Square Face Alignment"
-                    class="full-width-img img-square"
-                >
-            <p class="media-caption">A square face at impact is the difference between a fairway and a phone call to find your ball.</p>
+            <video class="loop-video" autoplay loop [muted]="true" playsinline>
+                    <source src="assets/images/Full_Video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            <p class="media-caption">Drive Align snaps on in seconds — instant proof of exactly where your driver is pointed.</p>
         </section>
 
         <section class="content-section">
-            <span class="section-label">The Tool</span>
+            <span class="section-label">The Solution</span>
             <h2>Drive Align: Not Just Another Face Pointer</h2>
             <p> I was tired of taping objects to my driver leaving nasty residue on my club and not to mention the result
                 was never straight. Cheap kids toys fall off and get bent out of shape faster than you can put them on. I wanted a real tool that was designed for the modern driver and could give me an instant visual of where my clubface was pointing at address and impact.
                 So I Invented Drive Align — the only face pointer designed for modern drivers.
             </p>
             
+            <img
+                    src="assets/images/drivealignprod.png"
+                    alt="A Perfectly Square Face Alignment"
+                    class="full-width-img img-square face-pointers-img"
+                >
+            <p class="media-caption">Powerful suction sticks to all drivers!</p>
             <ul class="bullet-list">
                 <li>
                     <div class="bullet-icon">1</div>
@@ -677,30 +767,35 @@
                 <li>
                     <div class="bullet-icon">2</div>
                     <div class="bullet-body">
-                        <span class="bullet-title">Fast and Easy Setup</span>
-                        <p>We made this for the range. It sticks on in easily and stays put,
-                            so you can practice your aim to hit the ball straighter.</p>
+                        <span class="bullet-title">Strong, Fast and Easy Setup</span>
+                        <p>Drive Align is a real tool designed for drivers. Kids darts and tape fall off or even worse point in the wrong direction
+                            making you aim even worse! Drive Align's suction is powerful so you can focus on learning to aim instead of worrying about
+                            whether your face pointer is going to fall off.
+                        </p>
                     </div>
                 </li>
+                
             </ul>
 
-            <video class="loop-video" autoplay loop [muted]="true" playsinline>
-                    <source src="assets/images/Full_Video.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            <p class="media-caption">Drive Align snaps on in seconds — instant proof of exactly where your driver is pointed.</p>
         </section>
 
         <div class="data-visualization">
-            <h3>How Much Distance Are You Losing? </h3>
+            <h3>How Far Off Line Does 1 deg affect your Drive? </h3>
             <h3>Use the Calculator to Find out!</h3>
             <app-trajectory-display />
         </div>
 
         <section class="final-cta">
-            <h2>READY TO HIT STRAIGHTER, LONGER, HIGHER DRIVES?</h2>
-            <p class="cta-sub">Every order includes the <strong>Drive Align Video Series</strong> step-by-step videos to lock in your aim and reduce spin for higher longer drives.</p>
-            <a class="btn-primary large" href="https://gentlegatorgolf.com/products/drive-align" target="_blank">GET DRIVE ALIGN + VIDEO SERIES — $34.99</a>
+            <h3>READY TO HIT HIGHER, LONGER, STRAIGHTER DRIVES?</h3>
+            <p>Every order includes the <strong>Drive Align Video Series</strong> to optimize your setup with simple visual feedback so you can see the difference.</p>
+            <ul class="cta-list">
+                <li>Hit it straighter with instant visual proof</li>
+                <li>Reduce spin for higher, longer carry</li>
+                <li>Works on all modern titanium & carbon drivers</li>
+                <li>30-Day Money Back Guarantee</li>
+            </ul>
+            <span class="cta-promise">Gain Up To 20 Yards Off The Tee</span>
+            <a class="btn-primary cta-btn" href="https://gentlegatorgolf.com/products/drive-align" target="_blank">GET DRIVE ALIGN + VIDEO SERIES — $34.99</a>
         </section>
 
     </div>
